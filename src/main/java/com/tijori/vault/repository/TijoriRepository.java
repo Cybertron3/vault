@@ -1,4 +1,4 @@
-package com.tijori.vault.Repository;
+package com.tijori.vault.repository;
 
 import com.tijori.vault.TijoriEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

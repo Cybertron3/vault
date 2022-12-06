@@ -1,5 +1,7 @@
 package com.tijori.vault;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,11 +10,12 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tijori")
+@Data
 public class TijoriEntity {
 
     @Id
-    @Column
-    private UUID id;
+    @Column(unique = true)
+    private UUID id = UUID.randomUUID();
 
     @Column(name = "user_id")
     private String userId;
